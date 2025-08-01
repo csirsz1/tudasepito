@@ -75,7 +75,7 @@
 <script>
     setInterval(() => {
       window.dispatchEvent(new Event('mousemove'));
-    }, 2000); // 2 másodpercenként szimulál egy egérmozgást
+    }, 30000); // 30 másodpercenként szimulál egy egérmozgást
 </script>
 
 <div id="ping"></div>
@@ -100,6 +100,10 @@
 
   setInterval(showOverlay, 10 * 60 * 1000);
 </script>
-
+<script>
+  setTimeout(() => {
+    location.reload();
+  }, 300000); // 300000 ms = 5 perc
+</script>
 </body>
 </html>
