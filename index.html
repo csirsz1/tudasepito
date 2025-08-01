@@ -72,6 +72,12 @@
 </head>
 <body>
 
+<script>
+    setInterval(() => {
+      window.dispatchEvent(new Event('mousemove'));
+    }, 2000); // 2 másodpercenként szimulál egy egérmozgást
+</script>
+
 <div id="ping"></div>
   
 <div id="overlay">
