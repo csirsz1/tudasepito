@@ -9,6 +9,17 @@
       height: 100%;
       font-family: sans-serif;
     }
+    
+    #ping {
+      width: 1px;
+      height: 1px;
+      background-color: red;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: move 60s infinite;
+    }
+    
     #overlay {
       position: fixed;
       top: 0; left: 0;
@@ -45,6 +56,13 @@
       0% { transform: translateX(0); }
       100% { transform: translateX(-100%); }
     }
+
+    @keyframes move {
+      0%   { top: 0; left: 0; }
+      50%  { top: 1px; left: 1px; }
+      100% { top: 0; left: 0; }
+    }
+    
     iframe {
       width: 100%;
       height: calc(100vh - 60px);
@@ -54,6 +72,8 @@
 </head>
 <body>
 
+<div id="ping"></div>
+  
 <div id="overlay">
   <img src="Takaro-kep.jpg" alt="Takaró kép">
 </div>
